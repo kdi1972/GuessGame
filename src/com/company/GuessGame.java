@@ -4,16 +4,14 @@ public class GuessGame {
     Player p1;
     Player p2;
     Player p3;
-    public void startGameO
-
-    {
+    public void startGame () {
         p1 = new Player();
         p2 = new Player();
         p3 = new Player();
 
-        int guesspl = 0;
-        int guessp2 = 0;
-        int guessp3 = 0;
+        int guesspl ;
+        int guessp2 ;
+        int guessp3 ;
 
         boolean plisRight = false;
         boolean p2isRight = false;
@@ -34,16 +32,16 @@ public class GuessGame {
             guessp3 = p3.number;
             System.out.println("Третий игрок думает, что это " + guessp3);
 
-            if (guesspl = targetNumber) {
+            if (guesspl == targetNumber) {
                 plisRight = true;
             }
-            if (guessp2 = targetNumber) {
+            if (guessp2 == targetNumber) {
                 p2isRight = true;
             }
-            if (guessp3 = targetNumber) {
+            if (guessp3 == targetNumber) {
                 p3isRight = true;
             }
-            if (plisRight | |p2isRight | |p3isRight){
+            if (plisRight || p2isRight || p3isRight) {
                 System.out.println("У нас есть победитель!");
                 System.out.println("Первый игрок угадал?" + plisRight);
                 System.out.println("Второй игрок угадал?" + p2isRight);
@@ -57,4 +55,3 @@ public class GuessGame {
         }//конец цикла
     }//конц метода
 }//конец класса
-
